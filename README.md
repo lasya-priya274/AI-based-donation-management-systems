@@ -1,5 +1,7 @@
 # TrustGive — AI-Based Donation Management System
 
+An AI-Based Donation Management System using Deep Learning (DL) and ledger technology to manage donations efficiently and securely. It ensures transparent transactions, tracks donor contributions, monitors donation progress, and provides real-time insights, building trust and accountability between donors and organizations.
+
 Connects donors, NGOs and beneficiaries on one platform (from the AIML project deck).
 
 - **AI**: Isolation Forest fraud/anomaly detection (+ explainable rules) and a TF-IDF recommender (scikit-learn)
