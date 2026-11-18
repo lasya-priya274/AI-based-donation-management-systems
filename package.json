@@ -1,0 +1,19 @@
+{
+  "name": "donation-system",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "install:frontend": "npm install --workspace frontend",
+    "backend:setup": "cd backend && .\\.venv\\Scripts\\python.exe manage.py migrate && .\\.venv\\Scripts\\python.exe manage.py seed",
+    "backend:dev": "cd backend && .\\.venv\\Scripts\\python.exe manage.py runserver 127.0.0.1:8000",
+    "frontend:dev": "npm run dev --workspace frontend",
+    "dev": "npm run backend:setup && concurrently --kill-others --names backend,frontend \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "build": "npm run build --workspace frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
